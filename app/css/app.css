@@ -185,4 +185,18 @@ div[ng-view].ng-enter-active {
 div[ng-view].ng-leave-active {
     left: -100%;    /*final css for view transition out*/
 }
+
+.video-image.ng-enter,
+.video-image.ng-move {
+    -webkit-animation: bounceIn 1s;
+    -moz-animation: bounceIn 1s;
+    -ms-animation: bounceIn 1s;
+    animation: bounceIn 1s;
+}
+.video-image.ng-leave {
+    -webkit-animation: bounceOut 1s;
+    -moz-animation: bounceOut 1s;
+    -ms-animation: bounceOut 1s;
+    animation: bounceOut 1s;
+}
 /*Styles for workout page - end*/
