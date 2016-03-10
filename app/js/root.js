@@ -2,11 +2,6 @@
 
 angular.module('app')
   .controller('RootController', ['$scope', '$modal', function ($scope, $modal) {
-
-      $scope.$on('$routeChangeSuccess', function (e, current, previous) {
-          $scope.currentRoute = current;
-      });
-
       $scope.showWorkoutHistory = function () {
           var dailog = $modal.open({
               templateUrl: 'partials/workout-history.html',
@@ -25,4 +20,9 @@ angular.module('app')
           };
       };
       WorkoutHistoryController['$inject'] = ['$scope', '$modalInstance', 'workoutHistoryTracker'];
+
+      $scope.$on('$routeChangeSuccess', function (e, current,previous) {
+          $scope.currentRoute = current;
+      });
+
   }]);
